@@ -36,11 +36,12 @@ Um emulador do **Nintendo Entertainment System (NES)** desenvolvido em Java do z
 - [x] Comparações (`CMP` nos modos existentes)
 - [x] Saltos incondicionais (`JMP` Absoluto e Indireto com tratamento do bug histórico de virada de página)
 - [x] Incremento e decremento de registradores (`INX`, `INY`, `DEX`, `DEY`)
+- [x] Demais Desvios Condicionais (`BNE`, `BPL`, `BMI`, `BCC`, `BCS`, `BVC`, `BVS`)
 - [ ] Instruções de Carga e Escrita (`LDA`, `STA`, `LDX`, `STX`, `LDY`, `STY`)
 - [ ] Aritmética e Lógica (`ADC`, `SBC`, `AND`, `ORA`, `EOR`, `BIT`)
 - [ ] Rotações e Deslocamentos (`ASL`, `LSR`, `ROL`, `ROR`)
-- [ ] Demais Desvios Condicionais (`BNE`, `BPL`, `BMI`, `BCC`, `BCS`, `BVC`, `BVS`)
 - [ ] Sub-rotinas e Interrupções (`JSR`, `RTS`, `BRK`, `RTI`, `NMI`, `IRQ`)
+
 
 ### Fase 3: Carregador de ROMs (iNES) e Mappers ⏳
 - [ ] Leitura e validação do cabeçalho `.nes` (iNES Header)
@@ -75,6 +76,5 @@ mvn clean compile javafx:run
 ## 📚 Referências Úteis
 
 - [Nesdev Wiki](https://www.nesdev.org/wiki/) - A principal documentação comunitária da arquitetura do NES
-- [6502 Instruction Reference (Obelisk)](http://www.obelisk.me.uk/6502/reference.html) - Guia rápido de instruções e modos de endereçamento do 6502
 - [The B Flag & 6502 Status Register](https://www.nesdev.org/wiki/Status_flags#The_B_flag) - Detalhamento das flags e pilha do 6502
 - [Visual 6502](http://visual6502.org/) - Simulador a nível de transistores do 6502
