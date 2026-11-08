@@ -51,9 +51,14 @@ public class RegisterHelper {
         X.setValue(pointerAddress);
     }
 
+    public void updateA(int value)  {
+        A.setValue(value & 0xFF);
+    }
+
     public void updateX(int value) {
         X.setValue(value & 0xFF);
     }
+
 
     public void updateY(int value) {
         Y.setValue(value & 0xFF);

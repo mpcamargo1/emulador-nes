@@ -11,6 +11,7 @@ import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Increment.I
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Increment.INY;
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Jump.JMP_ABSOLUTE;
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Jump.JMP_ABSOLUTE_INDIRECT;
+import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Load.LDA_IMMEDIATE;
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Register.*;
 
 public enum Instruction {
@@ -171,7 +172,7 @@ public enum Instruction {
     LDX_ZEROPAGE( 0xA6, AddressingMode.ZEROPAGE, 2, 3, ExtraCycleCondition.NONE),
     LAX_ZEROPAGE_ILLEGAL( 0xA7, AddressingMode.ZEROPAGE, 2, 3, ExtraCycleCondition.NONE, true),
     TAY( 0xA8, AddressingMode.IMPLIED, 1, 2, ExtraCycleCondition.NONE, new TAY()),
-    LDA_IMMEDIATE( 0xA9, AddressingMode.IMMEDIATE, 2, 2, ExtraCycleCondition.NONE),
+    LDA_IMMEDIATE( 0xA9, AddressingMode.IMMEDIATE, 2, 2, ExtraCycleCondition.NONE, new LDA_IMMEDIATE()),
     TAX( 0xAA, AddressingMode.IMPLIED, 1, 2, ExtraCycleCondition.NONE, new TAX()),
     LDY_ABSOLUTE( 0xAC, AddressingMode.ABSOLUTE, 3, 4, ExtraCycleCondition.NONE),
     LDA_ABSOLUTE( 0xAD, AddressingMode.ABSOLUTE, 3, 4, ExtraCycleCondition.NONE),
