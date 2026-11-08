@@ -12,6 +12,7 @@ import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Increment.I
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Jump.JMP_ABSOLUTE;
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Jump.JMP_ABSOLUTE_INDIRECT;
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Load.LDA_IMMEDIATE;
+import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Load.LDY_IMMEDIATE;
 import com.mpcamargo.emuladornes.core.HWDevices.CPU.Instruction.Impl.Register.*;
 
 public enum Instruction {
@@ -163,7 +164,7 @@ public enum Instruction {
 
     // -------------------------------------------------------------------------------------------------------------- //
 
-    LDY_IMMEDIATE( 0xA0, AddressingMode.IMMEDIATE, 2, 2, ExtraCycleCondition.NONE),
+    LDY_IMMEDIATE( 0xA0, AddressingMode.IMMEDIATE, 2, 2, ExtraCycleCondition.NONE, new LDY_IMMEDIATE()),
     LDA_INDIRECT_X( 0xA1, AddressingMode.INDIRECT_X, 2, 6, ExtraCycleCondition.NONE),
     LDX_IMMEDIATE( 0xA2, AddressingMode.IMMEDIATE, 2, 2, ExtraCycleCondition.NONE),
     LAX_INDIRECT_X_ILLEGAL( 0xA3, AddressingMode.INDIRECT_X, 2, 6, ExtraCycleCondition.NONE, true),
