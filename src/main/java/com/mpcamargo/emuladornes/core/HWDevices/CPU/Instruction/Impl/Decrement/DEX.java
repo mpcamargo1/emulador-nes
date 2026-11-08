@@ -10,7 +10,7 @@ public class DEX implements ExecutableInstruction {
     @Override
     public void execute(CPU cpu, Parameters parameters) throws Exception {
         int value = cpu.getRegisterHelper().getValueRegisterX();
-        value = (value - 1) + 0xFF;
+        value = (value - 1) & 0xFF;
         cpu.getRegisterHelper().updateX(value);
 
         cpu.getFlagHelper().removeFlag(Flag.ZERO);
